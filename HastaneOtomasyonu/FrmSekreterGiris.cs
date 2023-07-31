@@ -10,20 +10,16 @@ using System.Windows.Forms;
 
 namespace HastaneOtomasyonu
 {
-    public partial class FrmHastaGiris : Form
+    public partial class FrmSekreterGiris : Form
     {
-        public FrmHastaGiris()
+        public FrmSekreterGiris()
         {
             InitializeComponent();
         }
 
-        private void lnkUyeOl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
-            FrmUyeKayit frm = new FrmUyeKayit();
-            frm.Show();
         }
-
-      
     }
 }

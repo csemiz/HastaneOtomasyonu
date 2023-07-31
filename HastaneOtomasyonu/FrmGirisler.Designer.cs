@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGirisler));
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
+            btnDoktor = new Button();
+            btnHasta = new Button();
+            btnSekreter = new Button();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -40,38 +40,41 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // button1
+            // btnDoktor
             // 
-            button1.BackColor = Color.White;
-            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
-            button1.BackgroundImageLayout = ImageLayout.Stretch;
-            button1.Location = new Point(291, 282);
-            button1.Name = "button1";
-            button1.Size = new Size(171, 161);
-            button1.TabIndex = 0;
-            button1.UseVisualStyleBackColor = false;
+            btnDoktor.BackColor = Color.White;
+            btnDoktor.BackgroundImage = (Image)resources.GetObject("btnDoktor.BackgroundImage");
+            btnDoktor.BackgroundImageLayout = ImageLayout.Stretch;
+            btnDoktor.Location = new Point(291, 282);
+            btnDoktor.Name = "btnDoktor";
+            btnDoktor.Size = new Size(171, 161);
+            btnDoktor.TabIndex = 0;
+            btnDoktor.UseVisualStyleBackColor = false;
+            btnDoktor.Click += btnDoktor_Click;
             // 
-            // button2
+            // btnHasta
             // 
-            button2.BackColor = Color.White;
-            button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
-            button2.BackgroundImageLayout = ImageLayout.Stretch;
-            button2.Location = new Point(37, 282);
-            button2.Name = "button2";
-            button2.Size = new Size(171, 161);
-            button2.TabIndex = 0;
-            button2.UseVisualStyleBackColor = false;
+            btnHasta.BackColor = Color.White;
+            btnHasta.BackgroundImage = (Image)resources.GetObject("btnHasta.BackgroundImage");
+            btnHasta.BackgroundImageLayout = ImageLayout.Stretch;
+            btnHasta.Location = new Point(37, 282);
+            btnHasta.Name = "btnHasta";
+            btnHasta.Size = new Size(171, 161);
+            btnHasta.TabIndex = 0;
+            btnHasta.UseVisualStyleBackColor = false;
+            btnHasta.Click += btnHasta_Click;
             // 
-            // button3
+            // btnSekreter
             // 
-            button3.BackColor = Color.White;
-            button3.BackgroundImage = (Image)resources.GetObject("button3.BackgroundImage");
-            button3.BackgroundImageLayout = ImageLayout.Stretch;
-            button3.Location = new Point(548, 282);
-            button3.Name = "button3";
-            button3.Size = new Size(171, 161);
-            button3.TabIndex = 0;
-            button3.UseVisualStyleBackColor = false;
+            btnSekreter.BackColor = Color.White;
+            btnSekreter.BackgroundImage = (Image)resources.GetObject("btnSekreter.BackgroundImage");
+            btnSekreter.BackgroundImageLayout = ImageLayout.Stretch;
+            btnSekreter.Location = new Point(548, 282);
+            btnSekreter.Name = "btnSekreter";
+            btnSekreter.Size = new Size(171, 161);
+            btnSekreter.TabIndex = 0;
+            btnSekreter.UseVisualStyleBackColor = false;
+            btnSekreter.Click += btnSekreter_Click;
             // 
             // label1
             // 
@@ -124,10 +127,11 @@
             label4.TabIndex = 3;
             label4.Text = "HOSPITAL AUTOMATION";
             // 
-            // Form1
+            // FrmGirisler
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.FromArgb(192, 255, 255);
             ClientSize = new Size(826, 577);
             Controls.Add(label4);
@@ -135,11 +139,13 @@
             Controls.Add(label2);
             Controls.Add(label3);
             Controls.Add(label1);
-            Controls.Add(button2);
-            Controls.Add(button3);
-            Controls.Add(button1);
-            Name = "Form1";
-            Text = "Form1";
+            Controls.Add(btnHasta);
+            Controls.Add(btnSekreter);
+            Controls.Add(btnDoktor);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
+            Name = "FrmGirisler";
+            Text = "Hospital";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -147,9 +153,9 @@
 
         #endregion
 
-        private Button button1;
-        private Button button2;
-        private Button button3;
+        private Button btnDoktor;
+        private Button btnHasta;
+        private Button btnSekreter;
         private Label label1;
         private Label label2;
         private Label label3;

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUyeKayit));
             txtSifre = new TextBox();
             mskTC = new MaskedTextBox();
             label3 = new Label();
@@ -48,8 +49,7 @@
             txtSifre.Location = new Point(204, 303);
             txtSifre.Name = "txtSifre";
             txtSifre.Size = new Size(252, 27);
-            txtSifre.TabIndex = 8;
-            txtSifre.TextChanged += txtSifre_TextChanged;
+            txtSifre.TabIndex = 5;
             // 
             // mskTC
             // 
@@ -57,7 +57,7 @@
             mskTC.Mask = "00000000000";
             mskTC.Name = "mskTC";
             mskTC.Size = new Size(252, 27);
-            mskTC.TabIndex = 7;
+            mskTC.TabIndex = 3;
             mskTC.ValidatingType = typeof(int);
             // 
             // label3
@@ -69,7 +69,6 @@
             label3.Size = new Size(122, 27);
             label3.TabIndex = 5;
             label3.Text = "Telefon No :";
-            label3.Click += label3_Click;
             // 
             // label1
             // 
@@ -110,23 +109,20 @@
             label5.Size = new Size(147, 27);
             label5.TabIndex = 5;
             label5.Text = "TC Kimlik No :";
-            label5.Click += label3_Click;
             // 
             // txtAd
             // 
             txtAd.Location = new Point(204, 92);
             txtAd.Name = "txtAd";
             txtAd.Size = new Size(252, 27);
-            txtAd.TabIndex = 8;
-            txtAd.TextChanged += txtSifre_TextChanged;
+            txtAd.TabIndex = 1;
             // 
             // txtSoyad
             // 
             txtSoyad.Location = new Point(204, 141);
             txtSoyad.Name = "txtSoyad";
             txtSoyad.Size = new Size(252, 27);
-            txtSoyad.TabIndex = 8;
-            txtSoyad.TextChanged += txtSifre_TextChanged;
+            txtSoyad.TabIndex = 2;
             // 
             // mskTelefon
             // 
@@ -134,7 +130,7 @@
             mskTelefon.Mask = "(999) 000-0000";
             mskTelefon.Name = "mskTelefon";
             mskTelefon.Size = new Size(252, 27);
-            mskTelefon.TabIndex = 7;
+            mskTelefon.TabIndex = 4;
             // 
             // cmbCinsiyet
             // 
@@ -143,7 +139,7 @@
             cmbCinsiyet.Location = new Point(204, 356);
             cmbCinsiyet.Name = "cmbCinsiyet";
             cmbCinsiyet.Size = new Size(252, 28);
-            cmbCinsiyet.TabIndex = 9;
+            cmbCinsiyet.TabIndex = 6;
             // 
             // label6
             // 
@@ -162,14 +158,17 @@
             btnKayitOl.Location = new Point(204, 429);
             btnKayitOl.Name = "btnKayitOl";
             btnKayitOl.Size = new Size(252, 55);
-            btnKayitOl.TabIndex = 10;
+            btnKayitOl.TabIndex = 7;
             btnKayitOl.Text = "Kayıt Ol";
             btnKayitOl.UseVisualStyleBackColor = false;
+            btnKayitOl.Click += btnKayitOl_Click;
             // 
             // FrmUyeKayit
             // 
+            AcceptButton = btnKayitOl;
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = SystemColors.GradientInactiveCaption;
             ClientSize = new Size(480, 532);
             Controls.Add(btnKayitOl);
@@ -185,8 +184,11 @@
             Controls.Add(label3);
             Controls.Add(label6);
             Controls.Add(label1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
             Name = "FrmUyeKayit";
-            Text = "FrmUyeKayit";
+            Text = "Hasta Kayıt";
+            Load += FrmUyeKayit_Load;
             ResumeLayout(false);
             PerformLayout();
         }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHastaGiris));
             fileSystemWatcher1 = new FileSystemWatcher();
             label1 = new Label();
             label2 = new Label();
@@ -84,6 +85,7 @@
             lnkUyeOl.TabIndex = 1;
             lnkUyeOl.TabStop = true;
             lnkUyeOl.Text = "Üye Ol";
+            lnkUyeOl.LinkClicked += lnkUyeOl_LinkClicked;
             // 
             // button1
             // 
@@ -114,8 +116,10 @@
             // 
             // FrmHastaGiris
             // 
+            AcceptButton = button1;
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = SystemColors.GradientInactiveCaption;
             ClientSize = new Size(519, 395);
             Controls.Add(txtSifre);
@@ -125,8 +129,10 @@
             Controls.Add(label2);
             Controls.Add(label3);
             Controls.Add(label1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
             Name = "FrmHastaGiris";
-            Text = "FrmHastaGiris";
+            Text = "Hasta Girişi";
             ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).EndInit();
             ResumeLayout(false);
             PerformLayout();
