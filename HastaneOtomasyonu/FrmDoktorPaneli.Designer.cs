@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDoktorPaneli));
             btnGuncelle = new Button();
             btnSil = new Button();
             btnEkle = new Button();
@@ -212,6 +213,7 @@
             Controls.Add(cmbBrans);
             Controls.Add(txtAd);
             Controls.Add(lblsekretertc);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FrmDoktorPaneli";
             Text = "FrmDoktorPaneli";
             Load += FrmDoktorPaneli_Load;

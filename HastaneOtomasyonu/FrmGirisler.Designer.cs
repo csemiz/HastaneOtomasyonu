@@ -146,6 +146,7 @@
             MaximizeBox = false;
             Name = "FrmGirisler";
             Text = "Hospital";
+            Load += FrmGirisler_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

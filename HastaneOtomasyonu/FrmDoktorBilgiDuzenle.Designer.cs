@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDoktorBilgiDuzenle));
             cmbBrans = new ComboBox();
             label5 = new Label();
             btnGuncelle = new Button();
@@ -164,6 +165,7 @@
             Controls.Add(label1);
             Controls.Add(txtTc);
             Controls.Add(label2);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FrmDoktorBilgiDuzenle";
             Text = "FrmDoktorBilgiDuzenle";
             ResumeLayout(false);

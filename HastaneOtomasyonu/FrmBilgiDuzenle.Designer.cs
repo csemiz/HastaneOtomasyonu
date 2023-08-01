@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBilgiDuzenle));
             cmbCinsiyet = new ComboBox();
             txtAd = new TextBox();
             txtSoyad = new TextBox();
@@ -180,6 +181,7 @@
             Controls.Add(label3);
             Controls.Add(label6);
             Controls.Add(label1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FrmBilgiDuzenle";
             Text = "FrmBilgiDuzenle";
             ResumeLayout(false);

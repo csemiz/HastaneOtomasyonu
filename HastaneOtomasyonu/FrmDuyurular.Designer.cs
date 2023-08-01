@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDuyurular));
             dataGridDuyurular = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)dataGridDuyurular).BeginInit();
             SuspendLayout();
@@ -50,6 +51,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(822, 491);
             Controls.Add(dataGridDuyurular);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FrmDuyurular";
             Text = "FrmDuyurular";
             ((System.ComponentModel.ISupportInitialize)dataGridDuyurular).EndInit();

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDoktorDetay));
             groupBox1 = new GroupBox();
             lblTCNo = new Label();
             lblAdSoyad = new Label();
@@ -36,16 +37,16 @@
             groupBox2 = new GroupBox();
             rchSikayet = new RichTextBox();
             groupBox3 = new GroupBox();
-            groupBox4 = new GroupBox();
-            btnCikis = new Button();
-            btnDuyurular = new Button();
-            btnGuncelle = new Button();
             dataGridRandevuList = new DataGridView();
+            groupBox4 = new GroupBox();
+            btnGuncelle = new Button();
+            btnDuyurular = new Button();
+            btnCikis = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
-            groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridRandevuList).BeginInit();
+            groupBox4.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox1
@@ -132,6 +133,17 @@
             groupBox3.TabStop = false;
             groupBox3.Text = "Randevu Listesi";
             // 
+            // dataGridRandevuList
+            // 
+            dataGridRandevuList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridRandevuList.Dock = DockStyle.Fill;
+            dataGridRandevuList.Location = new Point(3, 23);
+            dataGridRandevuList.Name = "dataGridRandevuList";
+            dataGridRandevuList.RowHeadersWidth = 51;
+            dataGridRandevuList.RowTemplate.Height = 29;
+            dataGridRandevuList.Size = new Size(611, 676);
+            dataGridRandevuList.TabIndex = 0;
+            // 
             // groupBox4
             // 
             groupBox4.BackColor = SystemColors.GradientInactiveCaption;
@@ -145,15 +157,15 @@
             groupBox4.TabStop = false;
             groupBox4.Text = "groupBox4";
             // 
-            // btnCikis
+            // btnGuncelle
             // 
-            btnCikis.Font = new Font("Palatino Linotype", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            btnCikis.Location = new Point(6, 132);
-            btnCikis.Name = "btnCikis";
-            btnCikis.Size = new Size(303, 49);
-            btnCikis.TabIndex = 4;
-            btnCikis.Text = "Çıkış";
-            btnCikis.UseVisualStyleBackColor = true;
+            btnGuncelle.Font = new Font("Palatino Linotype", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            btnGuncelle.Location = new Point(6, 55);
+            btnGuncelle.Name = "btnGuncelle";
+            btnGuncelle.Size = new Size(149, 49);
+            btnGuncelle.TabIndex = 4;
+            btnGuncelle.Text = "Bilgi Düzenle";
+            btnGuncelle.UseVisualStyleBackColor = true;
             // 
             // btnDuyurular
             // 
@@ -165,26 +177,15 @@
             btnDuyurular.Text = "Duyurular";
             btnDuyurular.UseVisualStyleBackColor = true;
             // 
-            // btnGuncelle
+            // btnCikis
             // 
-            btnGuncelle.Font = new Font("Palatino Linotype", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            btnGuncelle.Location = new Point(6, 55);
-            btnGuncelle.Name = "btnGuncelle";
-            btnGuncelle.Size = new Size(149, 49);
-            btnGuncelle.TabIndex = 4;
-            btnGuncelle.Text = "Bilgi Düzenle";
-            btnGuncelle.UseVisualStyleBackColor = true;
-            // 
-            // dataGridRandevuList
-            // 
-            dataGridRandevuList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridRandevuList.Dock = DockStyle.Fill;
-            dataGridRandevuList.Location = new Point(3, 23);
-            dataGridRandevuList.Name = "dataGridRandevuList";
-            dataGridRandevuList.RowHeadersWidth = 51;
-            dataGridRandevuList.RowTemplate.Height = 29;
-            dataGridRandevuList.Size = new Size(611, 676);
-            dataGridRandevuList.TabIndex = 0;
+            btnCikis.Font = new Font("Palatino Linotype", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            btnCikis.Location = new Point(6, 132);
+            btnCikis.Name = "btnCikis";
+            btnCikis.Size = new Size(303, 49);
+            btnCikis.TabIndex = 4;
+            btnCikis.Text = "Çıkış";
+            btnCikis.UseVisualStyleBackColor = true;
             // 
             // FrmDoktorDetay
             // 
@@ -196,14 +197,15 @@
             Controls.Add(groupBox3);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FrmDoktorDetay";
             Text = "FrmDoktorDetay";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
             groupBox3.ResumeLayout(false);
-            groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridRandevuList).EndInit();
+            groupBox4.ResumeLayout(false);
             ResumeLayout(false);
         }
 

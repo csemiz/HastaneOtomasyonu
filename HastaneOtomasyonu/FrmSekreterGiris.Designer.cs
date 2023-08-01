@@ -122,6 +122,7 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FrmSekreterGiris";
             Text = "FrmSekreterGiris";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

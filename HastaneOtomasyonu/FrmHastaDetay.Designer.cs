@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHastaDetay));
             groupBox1 = new GroupBox();
             lblAdSoyad = new Label();
             label3 = new Label();
             lblTC = new Label();
             label1 = new Label();
             groupBox2 = new GroupBox();
+            lnkBilgiDuzenle = new LinkLabel();
             button1 = new Button();
             rchSikayet = new RichTextBox();
             cmbDoktor = new ComboBox();
@@ -46,7 +48,6 @@
             dataGridView1 = new DataGridView();
             groupBox4 = new GroupBox();
             dataGridView2 = new DataGridView();
-            lnkBilgiDuzenle = new LinkLabel();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -129,6 +130,16 @@
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
             groupBox2.Text = "Randevu Paneli";
+            // 
+            // lnkBilgiDuzenle
+            // 
+            lnkBilgiDuzenle.AutoSize = true;
+            lnkBilgiDuzenle.Location = new Point(83, 367);
+            lnkBilgiDuzenle.Name = "lnkBilgiDuzenle";
+            lnkBilgiDuzenle.Size = new Size(186, 27);
+            lnkBilgiDuzenle.TabIndex = 7;
+            lnkBilgiDuzenle.TabStop = true;
+            lnkBilgiDuzenle.Text = "Bilgilerini Güncelle";
             // 
             // button1
             // 
@@ -251,16 +262,6 @@
             dataGridView2.Size = new Size(592, 240);
             dataGridView2.TabIndex = 0;
             // 
-            // lnkBilgiDuzenle
-            // 
-            lnkBilgiDuzenle.AutoSize = true;
-            lnkBilgiDuzenle.Location = new Point(83, 367);
-            lnkBilgiDuzenle.Name = "lnkBilgiDuzenle";
-            lnkBilgiDuzenle.Size = new Size(186, 27);
-            lnkBilgiDuzenle.TabIndex = 7;
-            lnkBilgiDuzenle.TabStop = true;
-            lnkBilgiDuzenle.Text = "Bilgilerini Güncelle";
-            // 
             // FrmHastaDetay
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -271,6 +272,7 @@
             Controls.Add(groupBox3);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FrmHastaDetay";
             Text = "Hasta Detay";
             groupBox1.ResumeLayout(false);

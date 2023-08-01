@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRandevuListesi));
             dataGridView1 = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -49,6 +50,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1556, 841);
             Controls.Add(dataGridView1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FrmRandevuListesi";
             Text = "FrmRandevuListesi";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

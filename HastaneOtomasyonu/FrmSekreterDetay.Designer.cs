@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSekreterDetay));
             groupBox6 = new GroupBox();
             btnrandevuliste = new Button();
             btnbranspanel = new Button();
@@ -486,6 +487,7 @@
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Font = new Font("Palatino Linotype", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4);
             Name = "FrmSekreterDetay";
             Text = "FrmSekreterDetay";

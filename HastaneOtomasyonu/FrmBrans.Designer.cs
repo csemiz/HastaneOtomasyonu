@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBrans));
             btnGuncelle = new Button();
             btnSil = new Button();
             btnEkle = new Button();
@@ -129,6 +130,7 @@
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(txtbransid);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FrmBrans";
             Text = "FrmBrans";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
