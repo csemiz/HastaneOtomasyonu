@@ -34,7 +34,8 @@
             label3 = new Label();
             lblTC = new Label();
             label1 = new Label();
-            groupBox2 = new GroupBox();
+            groupBo = new GroupBox();
+            txtId = new TextBox();
             lnkBilgiDuzenle = new LinkLabel();
             button1 = new Button();
             rchSikayet = new RichTextBox();
@@ -42,6 +43,7 @@
             label8 = new Label();
             label7 = new Label();
             cmbBrans = new ComboBox();
+            lblId = new Label();
             label6 = new Label();
             label5 = new Label();
             groupBox3 = new GroupBox();
@@ -49,7 +51,7 @@
             groupBox4 = new GroupBox();
             dataGridView2 = new DataGridView();
             groupBox1.SuspendLayout();
-            groupBox2.SuspendLayout();
+            groupBo.SuspendLayout();
             groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox4.SuspendLayout();
@@ -111,41 +113,51 @@
             label1.TabIndex = 0;
             label1.Text = "TC NO :";
             // 
-            // groupBox2
+            // groupBo
             // 
-            groupBox2.BackColor = SystemColors.GradientActiveCaption;
-            groupBox2.Controls.Add(lnkBilgiDuzenle);
-            groupBox2.Controls.Add(button1);
-            groupBox2.Controls.Add(rchSikayet);
-            groupBox2.Controls.Add(cmbDoktor);
-            groupBox2.Controls.Add(label8);
-            groupBox2.Controls.Add(label7);
-            groupBox2.Controls.Add(cmbBrans);
-            groupBox2.Controls.Add(label6);
-            groupBox2.Controls.Add(label5);
-            groupBox2.Font = new Font("Palatino Linotype", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            groupBox2.Location = new Point(12, 247);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(472, 400);
-            groupBox2.TabIndex = 1;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "Randevu Paneli";
+            groupBo.BackColor = SystemColors.GradientActiveCaption;
+            groupBo.Controls.Add(txtId);
+            groupBo.Controls.Add(lnkBilgiDuzenle);
+            groupBo.Controls.Add(button1);
+            groupBo.Controls.Add(rchSikayet);
+            groupBo.Controls.Add(cmbDoktor);
+            groupBo.Controls.Add(label8);
+            groupBo.Controls.Add(label7);
+            groupBo.Controls.Add(cmbBrans);
+            groupBo.Controls.Add(lblId);
+            groupBo.Controls.Add(label6);
+            groupBo.Controls.Add(label5);
+            groupBo.Font = new Font("Palatino Linotype", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            groupBo.Location = new Point(12, 249);
+            groupBo.Name = "groupBo";
+            groupBo.Size = new Size(475, 450);
+            groupBo.TabIndex = 1;
+            groupBo.TabStop = false;
+            groupBo.Text = "Randevu Paneli";
+            // 
+            // txtId
+            // 
+            txtId.Location = new Point(159, 48);
+            txtId.Name = "txtId";
+            txtId.Size = new Size(262, 34);
+            txtId.TabIndex = 8;
             // 
             // lnkBilgiDuzenle
             // 
             lnkBilgiDuzenle.AutoSize = true;
-            lnkBilgiDuzenle.Location = new Point(83, 367);
+            lnkBilgiDuzenle.Location = new Point(85, 408);
             lnkBilgiDuzenle.Name = "lnkBilgiDuzenle";
             lnkBilgiDuzenle.Size = new Size(186, 27);
             lnkBilgiDuzenle.TabIndex = 7;
             lnkBilgiDuzenle.TabStop = true;
             lnkBilgiDuzenle.Text = "Bilgilerini Güncelle";
+            lnkBilgiDuzenle.LinkClicked += lnkBilgiDuzenle_LinkClicked;
             // 
             // button1
             // 
             button1.BackColor = Color.Cyan;
             button1.Font = new Font("Palatino Linotype", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(286, 324);
+            button1.Location = new Point(288, 365);
             button1.Name = "button1";
             button1.Size = new Size(133, 70);
             button1.TabIndex = 2;
@@ -154,7 +166,7 @@
             // 
             // rchSikayet
             // 
-            rchSikayet.Location = new Point(157, 166);
+            rchSikayet.Location = new Point(159, 207);
             rchSikayet.Name = "rchSikayet";
             rchSikayet.Size = new Size(262, 147);
             rchSikayet.TabIndex = 6;
@@ -163,16 +175,17 @@
             // cmbDoktor
             // 
             cmbDoktor.FormattingEnabled = true;
-            cmbDoktor.Location = new Point(157, 102);
+            cmbDoktor.Location = new Point(159, 143);
             cmbDoktor.Name = "cmbDoktor";
             cmbDoktor.Size = new Size(262, 35);
             cmbDoktor.TabIndex = 5;
+            cmbDoktor.SelectedIndexChanged += cmbDoktor_SelectedIndexChanged;
             // 
             // label8
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Palatino Linotype", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(44, 166);
+            label8.Location = new Point(46, 207);
             label8.Name = "label8";
             label8.Size = new Size(87, 27);
             label8.TabIndex = 4;
@@ -182,7 +195,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Palatino Linotype", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(44, 107);
+            label7.Location = new Point(46, 148);
             label7.Name = "label7";
             label7.Size = new Size(86, 27);
             label7.TabIndex = 4;
@@ -191,16 +204,27 @@
             // cmbBrans
             // 
             cmbBrans.FormattingEnabled = true;
-            cmbBrans.Location = new Point(157, 53);
+            cmbBrans.Location = new Point(159, 94);
             cmbBrans.Name = "cmbBrans";
             cmbBrans.Size = new Size(262, 35);
             cmbBrans.TabIndex = 3;
+            cmbBrans.SelectedIndexChanged += cmbBrans_SelectedIndexChanged;
+            // 
+            // lblId
+            // 
+            lblId.AutoSize = true;
+            lblId.Font = new Font("Palatino Linotype", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblId.Location = new Point(91, 55);
+            lblId.Name = "lblId";
+            lblId.Size = new Size(42, 27);
+            lblId.TabIndex = 2;
+            lblId.Text = "Id :";
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Palatino Linotype", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(57, 58);
+            label6.Location = new Point(57, 94);
             label6.Name = "label6";
             label6.Size = new Size(73, 27);
             label6.TabIndex = 2;
@@ -210,7 +234,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Palatino Linotype", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(57, 58);
+            label5.Location = new Point(59, 99);
             label5.Name = "label5";
             label5.Size = new Size(73, 27);
             label5.TabIndex = 2;
@@ -246,7 +270,7 @@
             groupBox4.Font = new Font("Palatino Linotype", 12F, FontStyle.Regular, GraphicsUnit.Point);
             groupBox4.Location = new Point(490, 374);
             groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(598, 273);
+            groupBox4.Size = new Size(598, 323);
             groupBox4.TabIndex = 3;
             groupBox4.TabStop = false;
             groupBox4.Text = "Aktif Randevular";
@@ -259,7 +283,7 @@
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowHeadersWidth = 51;
             dataGridView2.RowTemplate.Height = 29;
-            dataGridView2.Size = new Size(592, 240);
+            dataGridView2.Size = new Size(592, 290);
             dataGridView2.TabIndex = 0;
             // 
             // FrmHastaDetay
@@ -267,18 +291,19 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonFace;
-            ClientSize = new Size(1103, 658);
+            ClientSize = new Size(1100, 711);
             Controls.Add(groupBox4);
             Controls.Add(groupBox3);
-            Controls.Add(groupBox2);
+            Controls.Add(groupBo);
             Controls.Add(groupBox1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FrmHastaDetay";
             Text = "Hasta Detay";
+            Load += FrmHastaDetay_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
-            groupBox2.ResumeLayout(false);
-            groupBox2.PerformLayout();
+            groupBo.ResumeLayout(false);
+            groupBo.PerformLayout();
             groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             groupBox4.ResumeLayout(false);
@@ -293,7 +318,7 @@
         private Label label1;
         private Label lblAdSoyad;
         private Label label3;
-        private GroupBox groupBox2;
+        private GroupBox groupBo;
         private RichTextBox rchSikayet;
         private ComboBox cmbDoktor;
         private Label label8;
@@ -307,5 +332,7 @@
         private DataGridView dataGridView1;
         private DataGridView dataGridView2;
         private LinkLabel lnkBilgiDuzenle;
+        private TextBox txtId;
+        private Label lblId;
     }
 }

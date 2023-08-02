@@ -16,5 +16,12 @@ namespace HastaneOtomasyonu
         {
             InitializeComponent();
         }
+
+        public string TCNo;
+        private void FrmBilgiDuzenle_Load(object sender, EventArgs e)
+        {
+            mskTC.Text = TCNo;
+           
+        }
     }
 }

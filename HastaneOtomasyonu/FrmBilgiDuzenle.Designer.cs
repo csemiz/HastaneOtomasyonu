@@ -41,7 +41,7 @@
             label3 = new Label();
             label6 = new Label();
             label1 = new Label();
-            button1 = new Button();
+            btnGuncelle = new Button();
             SuspendLayout();
             // 
             // cmbCinsiyet
@@ -51,28 +51,29 @@
             cmbCinsiyet.Location = new Point(175, 278);
             cmbCinsiyet.Name = "cmbCinsiyet";
             cmbCinsiyet.Size = new Size(203, 28);
-            cmbCinsiyet.TabIndex = 21;
+            cmbCinsiyet.TabIndex = 6;
             // 
             // txtAd
             // 
+            txtAd.AcceptsTab = true;
             txtAd.Location = new Point(175, 14);
             txtAd.Name = "txtAd";
             txtAd.Size = new Size(203, 27);
-            txtAd.TabIndex = 18;
+            txtAd.TabIndex = 1;
             // 
             // txtSoyad
             // 
             txtSoyad.Location = new Point(175, 63);
             txtSoyad.Name = "txtSoyad";
             txtSoyad.Size = new Size(203, 27);
-            txtSoyad.TabIndex = 19;
+            txtSoyad.TabIndex = 2;
             // 
             // txtSifre
             // 
             txtSifre.Location = new Point(175, 225);
             txtSifre.Name = "txtSifre";
             txtSifre.Size = new Size(203, 27);
-            txtSifre.TabIndex = 20;
+            txtSifre.TabIndex = 5;
             // 
             // mskTelefon
             // 
@@ -80,7 +81,7 @@
             mskTelefon.Mask = "(999) 000-0000";
             mskTelefon.Name = "mskTelefon";
             mskTelefon.Size = new Size(203, 27);
-            mskTelefon.TabIndex = 16;
+            mskTelefon.TabIndex = 4;
             // 
             // mskTC
             // 
@@ -88,7 +89,7 @@
             mskTC.Mask = "00000000000";
             mskTC.Name = "mskTC";
             mskTC.Size = new Size(203, 27);
-            mskTC.TabIndex = 17;
+            mskTC.TabIndex = 3;
             mskTC.ValidatingType = typeof(int);
             // 
             // label2
@@ -151,24 +152,25 @@
             label1.TabIndex = 15;
             label1.Text = "Şifre :";
             // 
-            // button1
+            // btnGuncelle
             // 
-            button1.BackColor = Color.Lime;
-            button1.Font = new Font("Palatino Linotype", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(174, 340);
-            button1.Name = "button1";
-            button1.Size = new Size(203, 46);
-            button1.TabIndex = 22;
-            button1.Text = "Güncelle";
-            button1.UseVisualStyleBackColor = false;
+            btnGuncelle.BackColor = Color.Lime;
+            btnGuncelle.Font = new Font("Palatino Linotype", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnGuncelle.Location = new Point(174, 340);
+            btnGuncelle.Name = "btnGuncelle";
+            btnGuncelle.Size = new Size(203, 46);
+            btnGuncelle.TabIndex = 22;
+            btnGuncelle.Text = "Güncelle";
+            btnGuncelle.UseVisualStyleBackColor = false;
             // 
             // FrmBilgiDuzenle
             // 
+            AcceptButton = btnGuncelle;
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientInactiveCaption;
             ClientSize = new Size(431, 413);
-            Controls.Add(button1);
+            Controls.Add(btnGuncelle);
             Controls.Add(cmbCinsiyet);
             Controls.Add(txtAd);
             Controls.Add(txtSoyad);
@@ -184,6 +186,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FrmBilgiDuzenle";
             Text = "FrmBilgiDuzenle";
+            Load += FrmBilgiDuzenle_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -202,6 +205,6 @@
         private Label label3;
         private Label label6;
         private Label label1;
-        private Button button1;
+        private Button btnGuncelle;
     }
 }
