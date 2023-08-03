@@ -82,55 +82,58 @@
             groupBox6.Margin = new Padding(4);
             groupBox6.Name = "groupBox6";
             groupBox6.Padding = new Padding(4);
-            groupBox6.Size = new Size(911, 136);
+            groupBox6.Size = new Size(750, 136);
             groupBox6.TabIndex = 12;
             groupBox6.TabStop = false;
             groupBox6.Text = "Hızlı Erişim";
             // 
             // btnrandevuliste
             // 
-            btnrandevuliste.BackColor = Color.SlateBlue;
+            btnrandevuliste.BackColor = Color.DeepPink;
             btnrandevuliste.Font = new Font("Palatino Linotype", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            btnrandevuliste.ForeColor = SystemColors.ButtonHighlight;
-            btnrandevuliste.Location = new Point(634, 49);
+            btnrandevuliste.ForeColor = SystemColors.ActiveCaptionText;
+            btnrandevuliste.Location = new Point(494, 49);
             btnrandevuliste.Margin = new Padding(4);
             btnrandevuliste.Name = "btnrandevuliste";
-            btnrandevuliste.Size = new Size(226, 54);
+            btnrandevuliste.Size = new Size(196, 53);
             btnrandevuliste.TabIndex = 7;
             btnrandevuliste.Text = "Randevu Listesi";
             btnrandevuliste.UseVisualStyleBackColor = false;
+            btnrandevuliste.Click += btnrandevuliste_Click;
             // 
             // btnbranspanel
             // 
-            btnbranspanel.BackColor = Color.LightSeaGreen;
+            btnbranspanel.BackColor = Color.Yellow;
             btnbranspanel.Font = new Font("Palatino Linotype", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            btnbranspanel.ForeColor = SystemColors.ButtonHighlight;
-            btnbranspanel.Location = new Point(334, 49);
+            btnbranspanel.ForeColor = SystemColors.ActiveCaptionText;
+            btnbranspanel.Location = new Point(256, 49);
             btnbranspanel.Margin = new Padding(4);
             btnbranspanel.Name = "btnbranspanel";
-            btnbranspanel.Size = new Size(226, 54);
+            btnbranspanel.Size = new Size(196, 53);
             btnbranspanel.TabIndex = 1;
             btnbranspanel.Text = "Branş Paneli";
             btnbranspanel.UseVisualStyleBackColor = false;
+            btnbranspanel.Click += btnbranspanel_Click;
             // 
             // btndoktorpanel
             // 
-            btndoktorpanel.BackColor = Color.Tan;
+            btndoktorpanel.BackColor = Color.FromArgb(192, 0, 192);
             btndoktorpanel.Font = new Font("Palatino Linotype", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            btndoktorpanel.ForeColor = SystemColors.ButtonHighlight;
-            btndoktorpanel.Location = new Point(36, 49);
+            btndoktorpanel.ForeColor = SystemColors.ActiveCaptionText;
+            btndoktorpanel.Location = new Point(19, 49);
             btndoktorpanel.Margin = new Padding(4);
             btndoktorpanel.Name = "btndoktorpanel";
-            btndoktorpanel.Size = new Size(226, 54);
+            btndoktorpanel.Size = new Size(196, 53);
             btndoktorpanel.TabIndex = 0;
             btndoktorpanel.Text = "Doktor Paneli";
             btndoktorpanel.UseVisualStyleBackColor = false;
+            btndoktorpanel.Click += btndoktorpanel_Click;
             // 
             // groupBox5
             // 
             groupBox5.Controls.Add(dataGridView3);
             groupBox5.Font = new Font("Palatino Linotype", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            groupBox5.Location = new Point(935, 381);
+            groupBox5.Location = new Point(781, 382);
             groupBox5.Margin = new Padding(4);
             groupBox5.Name = "groupBox5";
             groupBox5.Padding = new Padding(4);
@@ -141,6 +144,7 @@
             // 
             // dataGridView3
             // 
+            dataGridView3.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView3.BackgroundColor = SystemColors.ControlLightLight;
             dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView3.Dock = DockStyle.Fill;
@@ -156,17 +160,18 @@
             // 
             groupBox4.Controls.Add(dataGridView2);
             groupBox4.Font = new Font("Palatino Linotype", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            groupBox4.Location = new Point(931, 18);
+            groupBox4.Location = new Point(781, 13);
             groupBox4.Margin = new Padding(4);
             groupBox4.Name = "groupBox4";
             groupBox4.Padding = new Padding(4);
-            groupBox4.Size = new Size(620, 342);
+            groupBox4.Size = new Size(620, 361);
             groupBox4.TabIndex = 10;
             groupBox4.TabStop = false;
             groupBox4.Text = "Branşlar";
             // 
             // dataGridView2
             // 
+            dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView2.BackgroundColor = SystemColors.ControlLightLight;
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView2.Dock = DockStyle.Fill;
@@ -175,7 +180,7 @@
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowHeadersWidth = 51;
             dataGridView2.RowTemplate.Height = 29;
-            dataGridView2.Size = new Size(612, 309);
+            dataGridView2.Size = new Size(612, 328);
             dataGridView2.TabIndex = 0;
             // 
             // groupBox3
@@ -197,24 +202,24 @@
             groupBox3.Controls.Add(label4);
             groupBox3.Controls.Add(lblId);
             groupBox3.Font = new Font("Palatino Linotype", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            groupBox3.Location = new Point(470, 18);
+            groupBox3.Location = new Point(367, 15);
             groupBox3.Margin = new Padding(4);
             groupBox3.Name = "groupBox3";
             groupBox3.Padding = new Padding(4);
-            groupBox3.Size = new Size(458, 529);
+            groupBox3.Size = new Size(398, 529);
             groupBox3.TabIndex = 9;
             groupBox3.TabStop = false;
             groupBox3.Text = "Randevu Paneli";
             // 
             // btnguncelle
             // 
-            btnguncelle.BackColor = Color.Teal;
+            btnguncelle.BackColor = Color.SpringGreen;
             btnguncelle.Font = new Font("Palatino Linotype", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            btnguncelle.ForeColor = SystemColors.ControlLightLight;
-            btnguncelle.Location = new Point(234, 428);
+            btnguncelle.ForeColor = SystemColors.ActiveCaptionText;
+            btnguncelle.Location = new Point(214, 428);
             btnguncelle.Margin = new Padding(4);
             btnguncelle.Name = "btnguncelle";
-            btnguncelle.Size = new Size(194, 59);
+            btnguncelle.Size = new Size(143, 59);
             btnguncelle.TabIndex = 16;
             btnguncelle.Text = "Güncelle";
             btnguncelle.UseVisualStyleBackColor = false;
@@ -223,14 +228,15 @@
             // 
             btnkaydet.BackColor = Color.FromArgb(255, 128, 255);
             btnkaydet.Font = new Font("Palatino Linotype", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            btnkaydet.ForeColor = SystemColors.ControlLightLight;
-            btnkaydet.Location = new Point(19, 428);
+            btnkaydet.ForeColor = SystemColors.ActiveCaptionText;
+            btnkaydet.Location = new Point(31, 428);
             btnkaydet.Margin = new Padding(4);
             btnkaydet.Name = "btnkaydet";
-            btnkaydet.Size = new Size(194, 59);
+            btnkaydet.Size = new Size(151, 59);
             btnkaydet.TabIndex = 2;
             btnkaydet.Text = "Kaydet";
             btnkaydet.UseVisualStyleBackColor = false;
+            btnkaydet.Click += btnkaydet_Click;
             // 
             // chkdurum
             // 
@@ -261,6 +267,7 @@
             cmbBrans.Name = "cmbBrans";
             cmbBrans.Size = new Size(235, 32);
             cmbBrans.TabIndex = 4;
+            cmbBrans.SelectedIndexChanged += cmbBrans_SelectedIndexChanged;
             // 
             // msksaat
             // 
@@ -383,7 +390,7 @@
             groupBox2.Margin = new Padding(4);
             groupBox2.Name = "groupBox2";
             groupBox2.Padding = new Padding(4);
-            groupBox2.Size = new Size(411, 332);
+            groupBox2.Size = new Size(343, 332);
             groupBox2.TabIndex = 8;
             groupBox2.TabStop = false;
             groupBox2.Text = "Duyuru Oluşturma";
@@ -393,22 +400,23 @@
             rchduyuru.Location = new Point(7, 44);
             rchduyuru.Margin = new Padding(4);
             rchduyuru.Name = "rchduyuru";
-            rchduyuru.Size = new Size(394, 200);
+            rchduyuru.Size = new Size(306, 200);
             rchduyuru.TabIndex = 2;
             rchduyuru.Text = "";
             // 
             // btnduyuru
             // 
-            btnduyuru.BackColor = Color.DarkSeaGreen;
+            btnduyuru.BackColor = Color.Aqua;
             btnduyuru.Font = new Font("Palatino Linotype", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            btnduyuru.ForeColor = SystemColors.ButtonHighlight;
-            btnduyuru.Location = new Point(7, 253);
+            btnduyuru.ForeColor = SystemColors.ActiveCaptionText;
+            btnduyuru.Location = new Point(7, 263);
             btnduyuru.Margin = new Padding(4);
             btnduyuru.Name = "btnduyuru";
-            btnduyuru.Size = new Size(396, 59);
+            btnduyuru.Size = new Size(306, 49);
             btnduyuru.TabIndex = 1;
             btnduyuru.Text = "Duyuru Oluştur";
             btnduyuru.UseVisualStyleBackColor = false;
+            btnduyuru.Click += btnduyuru_Click;
             // 
             // groupBox1
             // 
@@ -422,7 +430,7 @@
             groupBox1.Margin = new Padding(4);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(4);
-            groupBox1.Size = new Size(411, 165);
+            groupBox1.Size = new Size(343, 165);
             groupBox1.TabIndex = 7;
             groupBox1.TabStop = false;
             groupBox1.Text = "Sekreter Bilgi";
@@ -432,7 +440,7 @@
             lbladsoyad.AutoSize = true;
             lbladsoyad.BackColor = Color.Transparent;
             lbladsoyad.Font = new Font("Palatino Linotype", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            lbladsoyad.Location = new Point(169, 108);
+            lbladsoyad.Location = new Point(125, 102);
             lbladsoyad.Margin = new Padding(4, 0, 4, 0);
             lbladsoyad.Name = "lbladsoyad";
             lbladsoyad.Size = new Size(87, 24);
@@ -456,7 +464,7 @@
             lbltc.AutoSize = true;
             lbltc.BackColor = Color.Transparent;
             lbltc.Font = new Font("Palatino Linotype", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            lbltc.Location = new Point(125, 52);
+            lbltc.Location = new Point(125, 45);
             lbltc.Margin = new Padding(4, 0, 4, 0);
             lbltc.Name = "lbltc";
             lbltc.Size = new Size(109, 24);
@@ -479,7 +487,8 @@
             // 
             AutoScaleDimensions = new SizeF(11F, 24F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1586, 772);
+            BackColor = Color.FromArgb(192, 255, 255);
+            ClientSize = new Size(1420, 719);
             Controls.Add(groupBox6);
             Controls.Add(groupBox5);
             Controls.Add(groupBox4);

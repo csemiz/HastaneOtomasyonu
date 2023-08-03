@@ -8,7 +8,7 @@ namespace HastaneOtomasyonu
             InitializeComponent();
         }
 
-        SqlBaglantisi bgl=new SqlBaglantisi();
+        SqlBaglantisi bgl = new SqlBaglantisi();
         private void lnkUyeOl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
@@ -18,13 +18,13 @@ namespace HastaneOtomasyonu
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlCommand komut=new SqlCommand("Select * From Tbl_Hastalar Where HastaTC=@p1 and HastaSifre=@p2", bgl.Baglanti());
+            SqlCommand komut = new SqlCommand("Select * From Tbl_Hastalar Where HastaTC=@p1 and HastaSifre=@p2", bgl.Baglanti());
             komut.Parameters.AddWithValue("@p1", mskTC.Text);
             komut.Parameters.AddWithValue("@p2", txtSifre.Text);
-            SqlDataReader dr=komut.ExecuteReader();
-            if(dr.Read()) 
+            SqlDataReader dr = komut.ExecuteReader();
+            if (dr.Read())
             {
-                FrmHastaDetay fr=new FrmHastaDetay();
+                FrmHastaDetay fr = new FrmHastaDetay();
                 fr.tc = mskTC.Text;
                 fr.Show();
                 this.Hide();

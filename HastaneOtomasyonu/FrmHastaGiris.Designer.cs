@@ -114,6 +114,7 @@
             txtSifre.Name = "txtSifre";
             txtSifre.Size = new Size(252, 27);
             txtSifre.TabIndex = 4;
+            txtSifre.UseSystemPasswordChar = true;
             // 
             // FrmHastaGiris
             // 

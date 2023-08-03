@@ -154,6 +154,7 @@
             // 
             // btnGuncelle
             // 
+            btnGuncelle.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             btnGuncelle.BackColor = Color.Lime;
             btnGuncelle.Font = new Font("Palatino Linotype", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnGuncelle.Location = new Point(174, 340);
@@ -162,6 +163,7 @@
             btnGuncelle.TabIndex = 22;
             btnGuncelle.Text = "Güncelle";
             btnGuncelle.UseVisualStyleBackColor = false;
+            btnGuncelle.Click += btnGuncelle_Click;
             // 
             // FrmBilgiDuzenle
             // 
@@ -184,6 +186,7 @@
             Controls.Add(label6);
             Controls.Add(label1);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
             Name = "FrmBilgiDuzenle";
             Text = "FrmBilgiDuzenle";
             Load += FrmBilgiDuzenle_Load;

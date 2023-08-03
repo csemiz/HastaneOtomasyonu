@@ -69,9 +69,11 @@ namespace HastaneOtomasyonu
             FrmBilgiDuzenle fr = new FrmBilgiDuzenle();
             fr.TCNo = lblTC.Text;
             fr.Show();
-            
-            
-            
+
+
+
         }
+
+        
     }
 }

@@ -35,24 +35,28 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.Location = new Point(0, 0);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(1556, 841);
+            dataGridView1.Size = new Size(1047, 544);
             dataGridView1.TabIndex = 0;
             // 
             // FrmRandevuListesi
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1556, 841);
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            ClientSize = new Size(1047, 544);
             Controls.Add(dataGridView1);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
             Name = "FrmRandevuListesi";
-            Text = "FrmRandevuListesi";
+            Text = "Randevu Listesi";
+            Load += FrmRandevuListesi_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }

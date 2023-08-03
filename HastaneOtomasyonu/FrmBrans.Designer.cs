@@ -42,60 +42,72 @@
             // 
             // btnGuncelle
             // 
-            btnGuncelle.BackColor = Color.FromArgb(192, 255, 255);
-            btnGuncelle.Location = new Point(19, 228);
+            btnGuncelle.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnGuncelle.BackColor = Color.FromArgb(255, 128, 0);
+            btnGuncelle.Location = new Point(11, 233);
+            btnGuncelle.Margin = new Padding(4);
             btnGuncelle.Name = "btnGuncelle";
-            btnGuncelle.Size = new Size(268, 36);
+            btnGuncelle.Size = new Size(368, 43);
             btnGuncelle.TabIndex = 49;
             btnGuncelle.Text = "Güncelle";
             btnGuncelle.UseVisualStyleBackColor = false;
+            btnGuncelle.Click += btnGuncelle_Click;
             // 
             // btnSil
             // 
-            btnSil.BackColor = Color.FromArgb(255, 192, 255);
-            btnSil.Location = new Point(19, 286);
+            btnSil.BackColor = Color.FromArgb(192, 0, 192);
+            btnSil.Location = new Point(13, 296);
+            btnSil.Margin = new Padding(4);
             btnSil.Name = "btnSil";
-            btnSil.Size = new Size(268, 36);
+            btnSil.Size = new Size(368, 43);
             btnSil.TabIndex = 48;
             btnSil.Text = "Sil";
             btnSil.UseVisualStyleBackColor = false;
+            btnSil.Click += btnSil_Click;
             // 
             // btnEkle
             // 
-            btnEkle.BackColor = Color.FromArgb(192, 255, 192);
-            btnEkle.Location = new Point(19, 174);
+            btnEkle.BackColor = Color.Yellow;
+            btnEkle.Location = new Point(13, 162);
+            btnEkle.Margin = new Padding(4);
             btnEkle.Name = "btnEkle";
-            btnEkle.Size = new Size(268, 36);
+            btnEkle.Size = new Size(368, 43);
             btnEkle.TabIndex = 47;
             btnEkle.Text = "Ekle";
             btnEkle.UseVisualStyleBackColor = false;
+            btnEkle.Click += btnEkle_Click;
             // 
             // dataGridView1
             // 
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.BackgroundColor = SystemColors.Info;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(310, 64);
+            dataGridView1.Location = new Point(413, 30);
+            dataGridView1.Margin = new Padding(4);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(493, 258);
+            dataGridView1.Size = new Size(678, 310);
             dataGridView1.TabIndex = 46;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // txtbransadi
             // 
-            txtbransadi.Location = new Point(116, 116);
+            txtbransadi.Location = new Point(147, 92);
+            txtbransadi.Margin = new Padding(4);
             txtbransadi.Name = "txtbransadi";
-            txtbransadi.Size = new Size(171, 27);
+            txtbransadi.Size = new Size(234, 32);
             txtbransadi.TabIndex = 45;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.BackColor = Color.Transparent;
-            label5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(19, 64);
+            label5.Font = new Font("Palatino Linotype", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(41, 39);
+            label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
-            label5.Size = new Size(91, 28);
+            label5.Size = new Size(81, 24);
             label5.TabIndex = 44;
             label5.Text = "Branş Id:";
             // 
@@ -103,25 +115,28 @@
             // 
             label4.AutoSize = true;
             label4.BackColor = Color.Transparent;
-            label4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(7, 115);
+            label4.Font = new Font("Palatino Linotype", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(25, 100);
+            label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(103, 28);
+            label4.Size = new Size(93, 24);
             label4.TabIndex = 43;
             label4.Text = "Branş Adı:";
             // 
             // txtbransid
             // 
-            txtbransid.Location = new Point(116, 65);
+            txtbransid.Location = new Point(145, 31);
+            txtbransid.Margin = new Padding(4);
             txtbransid.Name = "txtbransid";
-            txtbransid.Size = new Size(171, 27);
+            txtbransid.Size = new Size(234, 32);
             txtbransid.TabIndex = 42;
             // 
             // FrmBrans
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(11F, 24F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(857, 365);
+            BackColor = Color.FromArgb(192, 255, 255);
+            ClientSize = new Size(1101, 354);
             Controls.Add(btnGuncelle);
             Controls.Add(btnSil);
             Controls.Add(btnEkle);
@@ -130,9 +145,13 @@
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(txtbransid);
+            Font = new Font("Palatino Linotype", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(4);
+            MaximizeBox = false;
             Name = "FrmBrans";
-            Text = "FrmBrans";
+            Text = "Branşlar";
+            Load += FrmBrans_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
