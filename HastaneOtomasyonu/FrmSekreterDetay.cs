@@ -108,5 +108,11 @@ namespace HastaneOtomasyonu
             FrmRandevuListesi frl = new FrmRandevuListesi();
             frl.Show();
         }
+
+        private void buttonDuyurular_Click(object sender, EventArgs e)
+        {
+            FrmDuyurular fr = new FrmDuyurular();
+            fr.Show();
+        }
     }
 }

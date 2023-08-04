@@ -44,6 +44,7 @@
             dataGridView1.RowTemplate.Height = 29;
             dataGridView1.Size = new Size(1047, 544);
             dataGridView1.TabIndex = 0;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // FrmRandevuListesi
             // 

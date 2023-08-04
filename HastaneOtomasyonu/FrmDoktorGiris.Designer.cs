@@ -43,6 +43,8 @@
             txtSifre.Name = "txtSifre";
             txtSifre.Size = new Size(252, 27);
             txtSifre.TabIndex = 11;
+            txtSifre.Text = "123456";
+            txtSifre.UseSystemPasswordChar = true;
             // 
             // mskTC
             // 
@@ -51,6 +53,7 @@
             mskTC.Name = "mskTC";
             mskTC.Size = new Size(252, 27);
             mskTC.TabIndex = 10;
+            mskTC.Text = "11111111111";
             mskTC.ValidatingType = typeof(int);
             // 
             // button1
@@ -63,6 +66,7 @@
             button1.TabIndex = 9;
             button1.Text = "Giriş Yap";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // label2
             // 
@@ -107,8 +111,10 @@
             Controls.Add(label3);
             Controls.Add(label1);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
             Name = "FrmDoktorGiris";
-            Text = "FrmDoktorGiris";
+            Text = "Doktor Giris";
+            Load += FrmDoktorGiris_Load;
             ResumeLayout(false);
             PerformLayout();
         }

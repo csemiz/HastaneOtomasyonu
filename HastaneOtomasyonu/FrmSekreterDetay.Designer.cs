@@ -38,7 +38,6 @@
             groupBox4 = new GroupBox();
             dataGridView2 = new DataGridView();
             groupBox3 = new GroupBox();
-            btnguncelle = new Button();
             btnkaydet = new Button();
             chkdurum = new CheckBox();
             cmbdoktor = new ComboBox();
@@ -62,6 +61,7 @@
             lblsekreterisim = new Label();
             lbltc = new Label();
             lblsekretertc = new Label();
+            buttonDuyurular = new Button();
             groupBox6.SuspendLayout();
             groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
@@ -74,6 +74,7 @@
             // 
             // groupBox6
             // 
+            groupBox6.Controls.Add(buttonDuyurular);
             groupBox6.Controls.Add(btnrandevuliste);
             groupBox6.Controls.Add(btnbranspanel);
             groupBox6.Controls.Add(btndoktorpanel);
@@ -82,7 +83,7 @@
             groupBox6.Margin = new Padding(4);
             groupBox6.Name = "groupBox6";
             groupBox6.Padding = new Padding(4);
-            groupBox6.Size = new Size(750, 136);
+            groupBox6.Size = new Size(830, 136);
             groupBox6.TabIndex = 12;
             groupBox6.TabStop = false;
             groupBox6.Text = "Hızlı Erişim";
@@ -92,10 +93,10 @@
             btnrandevuliste.BackColor = Color.DeepPink;
             btnrandevuliste.Font = new Font("Palatino Linotype", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             btnrandevuliste.ForeColor = SystemColors.ActiveCaptionText;
-            btnrandevuliste.Location = new Point(494, 49);
+            btnrandevuliste.Location = new Point(415, 49);
             btnrandevuliste.Margin = new Padding(4);
             btnrandevuliste.Name = "btnrandevuliste";
-            btnrandevuliste.Size = new Size(196, 53);
+            btnrandevuliste.Size = new Size(181, 57);
             btnrandevuliste.TabIndex = 7;
             btnrandevuliste.Text = "Randevu Listesi";
             btnrandevuliste.UseVisualStyleBackColor = false;
@@ -106,10 +107,10 @@
             btnbranspanel.BackColor = Color.Yellow;
             btnbranspanel.Font = new Font("Palatino Linotype", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             btnbranspanel.ForeColor = SystemColors.ActiveCaptionText;
-            btnbranspanel.Location = new Point(256, 49);
+            btnbranspanel.Location = new Point(207, 49);
             btnbranspanel.Margin = new Padding(4);
             btnbranspanel.Name = "btnbranspanel";
-            btnbranspanel.Size = new Size(196, 53);
+            btnbranspanel.Size = new Size(181, 57);
             btnbranspanel.TabIndex = 1;
             btnbranspanel.Text = "Branş Paneli";
             btnbranspanel.UseVisualStyleBackColor = false;
@@ -120,10 +121,10 @@
             btndoktorpanel.BackColor = Color.FromArgb(192, 0, 192);
             btndoktorpanel.Font = new Font("Palatino Linotype", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             btndoktorpanel.ForeColor = SystemColors.ActiveCaptionText;
-            btndoktorpanel.Location = new Point(19, 49);
+            btndoktorpanel.Location = new Point(1, 49);
             btndoktorpanel.Margin = new Padding(4);
             btndoktorpanel.Name = "btndoktorpanel";
-            btndoktorpanel.Size = new Size(196, 53);
+            btndoktorpanel.Size = new Size(181, 57);
             btndoktorpanel.TabIndex = 0;
             btndoktorpanel.Text = "Doktor Paneli";
             btndoktorpanel.UseVisualStyleBackColor = false;
@@ -133,7 +134,7 @@
             // 
             groupBox5.Controls.Add(dataGridView3);
             groupBox5.Font = new Font("Palatino Linotype", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            groupBox5.Location = new Point(781, 382);
+            groupBox5.Location = new Point(849, 385);
             groupBox5.Margin = new Padding(4);
             groupBox5.Name = "groupBox5";
             groupBox5.Padding = new Padding(4);
@@ -160,7 +161,7 @@
             // 
             groupBox4.Controls.Add(dataGridView2);
             groupBox4.Font = new Font("Palatino Linotype", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            groupBox4.Location = new Point(781, 13);
+            groupBox4.Location = new Point(853, 15);
             groupBox4.Margin = new Padding(4);
             groupBox4.Name = "groupBox4";
             groupBox4.Padding = new Padding(4);
@@ -185,7 +186,6 @@
             // 
             // groupBox3
             // 
-            groupBox3.Controls.Add(btnguncelle);
             groupBox3.Controls.Add(btnkaydet);
             groupBox3.Controls.Add(chkdurum);
             groupBox3.Controls.Add(cmbdoktor);
@@ -202,7 +202,7 @@
             groupBox3.Controls.Add(label4);
             groupBox3.Controls.Add(lblId);
             groupBox3.Font = new Font("Palatino Linotype", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            groupBox3.Location = new Point(367, 15);
+            groupBox3.Location = new Point(404, 15);
             groupBox3.Margin = new Padding(4);
             groupBox3.Name = "groupBox3";
             groupBox3.Padding = new Padding(4);
@@ -211,25 +211,12 @@
             groupBox3.TabStop = false;
             groupBox3.Text = "Randevu Paneli";
             // 
-            // btnguncelle
-            // 
-            btnguncelle.BackColor = Color.SpringGreen;
-            btnguncelle.Font = new Font("Palatino Linotype", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            btnguncelle.ForeColor = SystemColors.ActiveCaptionText;
-            btnguncelle.Location = new Point(214, 428);
-            btnguncelle.Margin = new Padding(4);
-            btnguncelle.Name = "btnguncelle";
-            btnguncelle.Size = new Size(143, 59);
-            btnguncelle.TabIndex = 16;
-            btnguncelle.Text = "Güncelle";
-            btnguncelle.UseVisualStyleBackColor = false;
-            // 
             // btnkaydet
             // 
             btnkaydet.BackColor = Color.FromArgb(255, 128, 255);
             btnkaydet.Font = new Font("Palatino Linotype", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             btnkaydet.ForeColor = SystemColors.ActiveCaptionText;
-            btnkaydet.Location = new Point(31, 428);
+            btnkaydet.Location = new Point(198, 415);
             btnkaydet.Margin = new Padding(4);
             btnkaydet.Name = "btnkaydet";
             btnkaydet.Size = new Size(151, 59);
@@ -242,7 +229,7 @@
             // 
             chkdurum.AutoSize = true;
             chkdurum.Font = new Font("Palatino Linotype", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            chkdurum.Location = new Point(169, 364);
+            chkdurum.Location = new Point(114, 364);
             chkdurum.Margin = new Padding(4);
             chkdurum.Name = "chkdurum";
             chkdurum.Size = new Size(93, 28);
@@ -271,7 +258,7 @@
             // 
             // msksaat
             // 
-            msksaat.Location = new Point(122, 161);
+            msksaat.Location = new Point(116, 161);
             msksaat.Margin = new Padding(4);
             msksaat.Mask = "00:00";
             msksaat.Name = "msksaat";
@@ -483,12 +470,25 @@
             lblsekretertc.TabIndex = 11;
             lblsekretertc.Text = "TC No:";
             // 
+            // buttonDuyurular
+            // 
+            buttonDuyurular.BackColor = Color.Red;
+            buttonDuyurular.ForeColor = SystemColors.ActiveCaptionText;
+            buttonDuyurular.Location = new Point(621, 49);
+            buttonDuyurular.Name = "buttonDuyurular";
+            buttonDuyurular.Size = new Size(179, 57);
+            buttonDuyurular.TabIndex = 8;
+            buttonDuyurular.Text = "Duyurular";
+            buttonDuyurular.UseVisualStyleBackColor = false;
+            buttonDuyurular.Click += buttonDuyurular_Click;
+            // 
             // FrmSekreterDetay
             // 
             AutoScaleDimensions = new SizeF(11F, 24F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.FromArgb(192, 255, 255);
-            ClientSize = new Size(1420, 719);
+            ClientSize = new Size(1486, 710);
             Controls.Add(groupBox6);
             Controls.Add(groupBox5);
             Controls.Add(groupBox4);
@@ -498,8 +498,9 @@
             Font = new Font("Palatino Linotype", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4);
+            MaximizeBox = false;
             Name = "FrmSekreterDetay";
-            Text = "FrmSekreterDetay";
+            Text = "Sekreter Detay";
             Load += FrmSekreterDetay_Load;
             groupBox6.ResumeLayout(false);
             groupBox5.ResumeLayout(false);
@@ -525,7 +526,6 @@
         private GroupBox groupBox4;
         private DataGridView dataGridView2;
         private GroupBox groupBox3;
-        private Button btnguncelle;
         private Button btnkaydet;
         private CheckBox chkdurum;
         private ComboBox cmbdoktor;
@@ -549,5 +549,6 @@
         private Label lblsekreterisim;
         private Label lbltc;
         private Label lblsekretertc;
+        private Button buttonDuyurular;
     }
 }

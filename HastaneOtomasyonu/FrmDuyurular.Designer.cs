@@ -35,6 +35,7 @@
             // 
             // dataGridDuyurular
             // 
+            dataGridDuyurular.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridDuyurular.BackgroundColor = Color.AntiqueWhite;
             dataGridDuyurular.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridDuyurular.Dock = DockStyle.Fill;
@@ -54,6 +55,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FrmDuyurular";
             Text = "FrmDuyurular";
+            Load += FrmDuyurular_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridDuyurular).EndInit();
             ResumeLayout(false);
         }

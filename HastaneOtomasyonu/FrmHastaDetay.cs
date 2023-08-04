@@ -59,7 +59,7 @@ namespace HastaneOtomasyonu
         private void cmbDoktor_SelectedIndexChanged(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("Select * From Tbl_Randevular where RandevuBrans='" + cmbBrans.Text + "'", bgl.Baglanti());
+            SqlDataAdapter da = new SqlDataAdapter("Select * From Tbl_Randevular where RandevuBrans='" + cmbBrans.Text + "'" + "and RandevuDoktor='" + cmbDoktor.Text + "' and RandevuDurum=0", bgl.Baglanti());
             da.Fill(dt);
             dataGridView2.DataSource = dt;
         }
@@ -74,6 +74,21 @@ namespace HastaneOtomasyonu
 
         }
 
-        
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int secilen = dataGridView2.SelectedCells[0].RowIndex;
+            txtId.Text = dataGridView2.Rows[secilen].Cells[0].Value.ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SqlCommand komut = new SqlCommand("Update Tbl_Randevular Set RandevuDurum=1,HastaTC=@p1,HastaSikayet=@p2 where RandevuId=@p3", bgl.Baglanti());
+            komut.Parameters.AddWithValue("@p1", lblTC.Text);
+            komut.Parameters.AddWithValue("@p2", rchSikayet.Text);
+            komut.Parameters.AddWithValue("@p3", txtId.Text);
+            komut.ExecuteNonQuery();
+            bgl.Baglanti().Close();
+            MessageBox.Show("Randevu Alındı", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
     }
 }

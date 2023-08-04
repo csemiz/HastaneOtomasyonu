@@ -143,6 +143,7 @@
             dataGridRandevuList.RowTemplate.Height = 29;
             dataGridRandevuList.Size = new Size(611, 676);
             dataGridRandevuList.TabIndex = 0;
+            dataGridRandevuList.CellClick += dataGridRandevuList_CellClick;
             // 
             // groupBox4
             // 
@@ -166,6 +167,7 @@
             btnGuncelle.TabIndex = 4;
             btnGuncelle.Text = "Bilgi Düzenle";
             btnGuncelle.UseVisualStyleBackColor = true;
+            btnGuncelle.Click += btnGuncelle_Click;
             // 
             // btnDuyurular
             // 
@@ -176,6 +178,7 @@
             btnDuyurular.TabIndex = 4;
             btnDuyurular.Text = "Duyurular";
             btnDuyurular.UseVisualStyleBackColor = true;
+            btnDuyurular.Click += btnDuyurular_Click;
             // 
             // btnCikis
             // 
@@ -186,6 +189,7 @@
             btnCikis.TabIndex = 4;
             btnCikis.Text = "Çıkış";
             btnCikis.UseVisualStyleBackColor = true;
+            btnCikis.Click += btnCikis_Click;
             // 
             // FrmDoktorDetay
             // 
@@ -200,6 +204,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FrmDoktorDetay";
             Text = "FrmDoktorDetay";
+            Load += FrmDoktorDetay_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);

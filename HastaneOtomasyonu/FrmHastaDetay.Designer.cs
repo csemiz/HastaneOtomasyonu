@@ -137,6 +137,7 @@
             // 
             // txtId
             // 
+            txtId.Enabled = false;
             txtId.Location = new Point(159, 48);
             txtId.Name = "txtId";
             txtId.Size = new Size(262, 34);
@@ -163,6 +164,7 @@
             button1.TabIndex = 2;
             button1.Text = "Randevu Al";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // rchSikayet
             // 
@@ -285,11 +287,13 @@
             dataGridView2.RowTemplate.Height = 29;
             dataGridView2.Size = new Size(592, 290);
             dataGridView2.TabIndex = 0;
+            dataGridView2.CellClick += dataGridView2_CellClick;
             // 
             // FrmHastaDetay
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = SystemColors.ButtonFace;
             ClientSize = new Size(1100, 711);
             Controls.Add(groupBox4);
@@ -297,6 +301,7 @@
             Controls.Add(groupBo);
             Controls.Add(groupBox1);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
             Name = "FrmHastaDetay";
             Text = "Hasta Detay";
             Load += FrmHastaDetay_Load;

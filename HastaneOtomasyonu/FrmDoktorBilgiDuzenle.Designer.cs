@@ -38,8 +38,8 @@
             txtSoyad = new TextBox();
             label4 = new Label();
             label1 = new Label();
-            txtTc = new MaskedTextBox();
             label2 = new Label();
+            mskTC = new MaskedTextBox();
             SuspendLayout();
             // 
             // cmbBrans
@@ -63,6 +63,7 @@
             // 
             // btnGuncelle
             // 
+            btnGuncelle.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             btnGuncelle.BackColor = Color.MidnightBlue;
             btnGuncelle.Cursor = Cursors.Hand;
             btnGuncelle.Font = new Font("Palatino Linotype", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -73,6 +74,7 @@
             btnGuncelle.TabIndex = 35;
             btnGuncelle.Text = "Güncelle";
             btnGuncelle.UseVisualStyleBackColor = false;
+            btnGuncelle.Click += btnGuncelle_Click;
             // 
             // txtsifre
             // 
@@ -128,15 +130,6 @@
             label1.TabIndex = 29;
             label1.Text = "Hasta Adı:";
             // 
-            // txtTc
-            // 
-            txtTc.Location = new Point(178, 144);
-            txtTc.Mask = "00000";
-            txtTc.Name = "txtTc";
-            txtTc.Size = new Size(144, 27);
-            txtTc.TabIndex = 28;
-            txtTc.ValidatingType = typeof(int);
-            // 
             // label2
             // 
             label2.AutoSize = true;
@@ -148,12 +141,22 @@
             label2.TabIndex = 27;
             label2.Text = "TC Kimlik No:";
             // 
+            // mskTC
+            // 
+            mskTC.Location = new Point(178, 145);
+            mskTC.Mask = "00000000000";
+            mskTC.Name = "mskTC";
+            mskTC.Size = new Size(144, 27);
+            mskTC.TabIndex = 38;
+            mskTC.ValidatingType = typeof(int);
+            // 
             // FrmDoktorBilgiDuzenle
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 255, 255);
             ClientSize = new Size(348, 399);
+            Controls.Add(mskTC);
             Controls.Add(cmbBrans);
             Controls.Add(label5);
             Controls.Add(btnGuncelle);
@@ -163,11 +166,12 @@
             Controls.Add(txtSoyad);
             Controls.Add(label4);
             Controls.Add(label1);
-            Controls.Add(txtTc);
             Controls.Add(label2);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
             Name = "FrmDoktorBilgiDuzenle";
             Text = "FrmDoktorBilgiDuzenle";
+            Load += FrmDoktorBilgiDuzenle_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -183,7 +187,7 @@
         private TextBox txtSoyad;
         private Label label4;
         private Label label1;
-        private MaskedTextBox txtTc;
         private Label label2;
+        private MaskedTextBox mskTC;
     }
 }
